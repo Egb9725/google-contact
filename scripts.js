@@ -47,8 +47,8 @@ document.addEventListener('submit', function(event) {
 
 let contacts = [];
 //ajouter un nouveau contact au tableau 
-function addContact(prenom,nom,entreprise,fonction, email) {
-  contacts.push({prenom,nom,entreprise,fonction, email});
+function addContact(prenom,nom,entreprise,fonction, telephone,email) {
+  contacts.push({prenom,nom,entreprise,fonction, telephone,email});
   displayContacts(); //pour mettre à jour l'affichage de la liste des contacts.
 }
 
@@ -72,8 +72,8 @@ function displayContacts() {
               html += `<tr>
                         <td>${contact.prenom} ${contact.nom}</td>
                         <td>${contact.email}</td>
+                        <td>${contact.telephone}</td>
                         <td>${contact.fonction} ${contact.entreprise}</td>
-                        <td>${contact.fonction}</td>
                         <td>${contact.email}</td>
                       </tr>`;
               });
