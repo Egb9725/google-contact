@@ -4,6 +4,8 @@ body, html {
   font-family: Arial, sans-serif;
   background-color: #F6F8FC;
 }
+
+/* Menu de navigation */
 .navbar {
   color: black;
   padding: 10px;
@@ -12,43 +14,38 @@ body, html {
   justify-content: space-between; /* Répartit les éléments uniformément */
 }
 
-
 .navbar > .cont {
-  display: flex; /* Assurez-vous que les éléments à l'intérieur de .cont sont aussi flex */
-  align-items: center; /* Alignement vertical au centre */
+  display: flex; 
+  align-items: center; 
   gap: 10px; /* Espacement entre les éléments dans .cont */
 }
 
-
 .navbar input[type="text"] {
   flex-grow: 1; /* Permet à l'input de prendre tout l'espace disponible */
-  margin: 0 20px; /* Espacement autour de l'input */
-  padding: 8px 15px; /* Padding approprié pour l'input */
-  border-radius: 8px; /* Bordures arrondies pour l'input */
-  border: 1px solid #ccc; /* Ajoute une bordure légère pour l'input */
+  margin: 0 20px; 
+  padding: 8px 15px; 
+  border-radius: 8px; 
+  border: 1px solid #ccc; 
 }
-
 
 #toggle-sidebar {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex; /* Assurez-vous que ce bouton est aussi en flex */
+  display: flex; 
   align-items: center; /* Centre verticalement le SVG */
   justify-content: center; /* Centre horizontalement le SVG */
-  width: 40px; /* Largeur fixe pour la cohérence */
-  height: 40px; /* Hauteur fixe pour la cohérence */
-  padding: 5px; /* Un peu de padding autour de l'icône */
+  width: 40px; 
+  height: 40px; 
+  padding: 5px; 
 }
 
-
-/* Assurez-vous que l'image a des dimensions fixes pour éviter tout débordement */
 .navbar img {
   width: 40px;
   height: 40px;
 }
 
-
+/* Sidebar et recepeteur de contenu */
 .container {
   display: flex;
   height: calc(100% - 40px);
@@ -63,8 +60,7 @@ body, html {
   display: none;
 }
 
-/* Pour les boutons de Sidebar */
-#create-contact {
+#create-contact {/* Pour le boutons de creer du contact*/
   width: 10rem;
   background-color: #C2E7FF;
   font-weight: 700;
@@ -74,7 +70,7 @@ body, html {
   margin: 1.2rem;
 }
 
-#create-contact-1{
+#create-contact-1{/* Pour le boutons de contact*/
   width: 10rem;
   text-align: left;
   background-color: #C2E7FF;
@@ -85,7 +81,7 @@ body, html {
   margin: 20px;
 }
 
-#create-contact-2 {
+#create-contact-2 {/* Pour le boutons de frequents*/
   width: 70%;
   font-weight: 700;
   border: none;
@@ -94,8 +90,7 @@ body, html {
   text-align: left;
 }
 
-/* Pour container */
-.content {
+.content {/* Pour recepteur de contenu */
   flex-grow: 1;
   background-color: white;
   transition: margin-left 0.5s;
@@ -104,39 +99,42 @@ body, html {
   margin-top: 10px;
 
 }
-.hiddenSidebar .sidebar {
+.hiddenSidebar .sidebar { /* la sidebar est cachée */
   width: 0;
 }
-.hiddenSidebar .content {
+.hiddenSidebar .content { /* le contenu principal prendra toute la largeur disponible lorsque la barre latérale est cachée */
   margin-left: 0;
 }
 
-/* pour positionner le bouton en haut */
-.contact-form {
-  position: relative; /* Permet le positionnement absolu du bouton par rapport au formulaire */
-  padding-top: 50px; /* Espace pour le bouton en haut */
+.contact-form {/* pour positionner le bouton en haut */
+  position: relative; 
+  padding-top: 50px; 
 }
 
 .save-button {
   position: absolute; /* Positionnement absolu par rapport au premier parent relatif */
-  top: 10px; /* Espace du haut */
-  right: 10px; /* Espace de la droite */
+  top: 10px; 
+  right: 10px; 
 }
 
-/* mise en forme tableau */
+.LrbNhc {
+  border-radius: 50%;
+  height: 162px;
+  width: 162px;
+}
 
-table {
+table { /* mise en forme tableau */
 width: 100%;
 border-collapse: collapse; /* Les bordures des cellules sont fusionnées */
 }
 
 th, td {
 border: none; /* Bordure légère pour chaque cellule */
-padding: 8px; /* Padding dans les cellules */
-text-align: left; /* Alignement du texte à gauche */
+padding: 8px; 
+text-align: left; 
 }
 
-th {
-background-color: #f2f2f2; /* Couleur de fond pour les en-têtes de tableau */
+td {
+background-color: white; /* Couleur de fond pour les en-têtes de tableau */
 }
 
