@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Contacts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="cont">
+
+      <svg id="toggle-sidebar" focusable="false" viewBox="0 0 24 24">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+      </svg>
+      <span>
+        <img class="gb_Nc gb_Nd" src="https://www.gstatic.com/images/branding/product/1x/contacts_2022_48dp.png" alt="" style="width:40px;height:40px">
+      </span>Contacts
+
+    </div>
+
+    <input type="text" placeholder="Rechercher..." id="search-input">
+
+  </nav>
+
+  <div class="container">
+
+    <aside class="sidebar">
+      <button id="create-contact"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+        </svg></span> Créer un contact
+      </button>
+
+      <button id="create-contact-1"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg></span> Contacts
+      </button>
+
+      <button class="create-contact-2" id="create-contact-2"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+        </svg></span> Fréquents
+      </button>
+
+
+    </aside>
+
+    <div class="content" id="content">
+      <h2>Contacts</h2>
+      <p></p>
+    </div>
+
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F6F8FC;
+}
+.navbar {
+  color: black;
+  padding: 10px;
+  display: flex; /* Utilisez Flexbox pour aligner les éléments */
+  align-items: center; /* Centre les éléments verticalement */
+  justify-content: space-between; /* Répartit les éléments uniformément */
+}
+
+
+.navbar > .cont {
+  display: flex; /* Assurez-vous que les éléments à l'intérieur de .cont sont aussi flex */
+  align-items: center; /* Alignement vertical au centre */
+  gap: 10px; /* Espacement entre les éléments dans .cont */
+}
+
+
+.navbar input[type="text"] {
+  flex-grow: 1; /* Permet à l'input de prendre tout l'espace disponible */
+  margin: 0 20px; /* Espacement autour de l'input */
+  padding: 8px 15px; /* Padding approprié pour l'input */
+  border-radius: 8px; /* Bordures arrondies pour l'input */
+  border: 1px solid #ccc; /* Ajoute une bordure légère pour l'input */
+}
+
+
+#toggle-sidebar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex; /* Assurez-vous que ce bouton est aussi en flex */
+  align-items: center; /* Centre verticalement le SVG */
+  justify-content: center; /* Centre horizontalement le SVG */
+  width: 40px; /* Largeur fixe pour la cohérence */
+  height: 40px; /* Hauteur fixe pour la cohérence */
+  padding: 5px; /* Un peu de padding autour de l'icône */
+}
+
+
+/* Assurez-vous que l'image a des dimensions fixes pour éviter tout débordement */
+.navbar img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.container {
+  display: flex;
+  height: calc(100% - 40px);
+}
+.sidebar {
+  width: 200px;
+  height: 100%;
+  transition: width 0.5s;
+  
+}
+.sidebar.hidden {
+  display: none;
+}
+
+/* Pour les boutons de Sidebar */
+#create-contact {
+  width: 10rem;
+  background-color: #C2E7FF;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1.2rem;
+}
+
+#create-contact-1{
+  width: 10rem;
+  text-align: left;
+  background-color: #C2E7FF;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 20px;
+}
+
+#create-contact-2 {
+  width: 70%;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  text-align: left;
+}
+
+/* Pour container */
+.content {
+  flex-grow: 1;
+  background-color: white;
+  transition: margin-left 0.5s;
+  border-radius: 1rem;
+  padding: 24px 12px;
+  margin-top: 10px;
+
+}
+.hiddenSidebar .sidebar {
+  width: 0;
+}
+.hiddenSidebar .content {
+  margin-left: 0;
+}
+
+/* pour positionner le bouton en haut */
+.contact-form {
+  position: relative; /* Permet le positionnement absolu du bouton par rapport au formulaire */
+  padding-top: 50px; /* Espace pour le bouton en haut */
+}
+
+.save-button {
+  position: absolute; /* Positionnement absolu par rapport au premier parent relatif */
+  top: 10px; /* Espace du haut */
+  right: 10px; /* Espace de la droite */
+}
+
+/* mise en forme tableau */
+
+table {
+width: 100%;
+border-collapse: collapse; /* Les bordures des cellules sont fusionnées */
+}
+
+th, td {
+border: none; /* Bordure légère pour chaque cellule */
+padding: 8px; /* Padding dans les cellules */
+text-align: left; /* Alignement du texte à gauche */
+}
+
+th {
+background-color: #f2f2f2; /* Couleur de fond pour les en-têtes de tableau */
+}
+
