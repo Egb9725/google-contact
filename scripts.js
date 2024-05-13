@@ -67,12 +67,15 @@ document.getElementById('create-contact').addEventListener('click', function() {
     <br>
     <br>
 
-    <button type="submit" class="save-button">Enregistrer</button>
+    <button type="submit" class="save-button" onclick="countElements()">Enregistrer</button>
 
   </form>
 
   `;
 });
+
+
+
 
 //déclencher un evenement à chaque fois qu'un formulaire est soumis sur la page
 document.addEventListener('submit', function(event) {
@@ -89,8 +92,6 @@ document.addEventListener('submit', function(event) {
   }
 });
 
-
-let contacts = [];
 //ajouter un nouveau contact au tableau 
 function addContact(prenom,nom,entreprise,fonction, telephone,email) {
   contacts.push({prenom,nom,entreprise,fonction, telephone,email});
@@ -98,9 +99,10 @@ function addContact(prenom,nom,entreprise,fonction, telephone,email) {
 }
 
 
+let contacts = [];
 function displayContacts() {
   const contentDiv = document.getElementById('content');
-  let html = `<h3>Contacts</h3>
+  let html = `<h3>Contacts</h3> 
             <table id="list">
               <thead>
                 <tr>
@@ -127,13 +129,14 @@ function displayContacts() {
 }
 
 
+
+
+
 //conteneur d'element
-function countElements(){
-  let tableauElements=document.getElementById("list");
-  let ligneTableau=tableauElements.rows.length;
-  let totalElements=0;
-  for(let i=0; i<ligneTableau;i++){
-    totalElements+=tableauElements[i].getElementByTagName("td").length;
-  }
-  document.getElementById("result").innerHTML=" "+totalElements;
-}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+   
+    let td = document.getElementById('list').rows[0].cells.length;
+    alert('Nombre de colonnes est: ' + td);
+});
