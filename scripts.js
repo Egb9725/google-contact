@@ -12,36 +12,34 @@ document.getElementById('create-contact').addEventListener('click', function() {
     <img class="LrbNhc tUOMob" src="https://www.gstatic.com/identity/boq/profilepicturepicker/photo_silhouette_e02a5f5deb3ffc173119a01bc9575490.png" alt="Photo d'un contact." data-iml="25926.400000000373">  
     <br>
     <br>
-
-    <label for="prenom">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-      <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-      </svg>
-    </label>
-    <input type="text" id="prenom" placeholder="Prénom" name="prenom">
-    <br>
-    <br>
-
-    <label for="nom"></label>
-    <input type="text" id="nom" name="nom" placeholder="Nom">
-    <br>
-    <br>
-    
-    <label for="entreprise">
+    <div>
+      <label for="prenom">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+        </svg>
+      </label>
+      <input type="text" id="prenom" placeholder="Prénom" name="prenom">
+      <br>
+      <label for="nom"></label>
+      <input type="text" id="nom" name="nom" placeholder="Nom">
+      <br>
+      <br>
+    </div>
+    <div>
+      <label for="entreprise">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
         <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
         <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/>
       </svg>
-    </label>
-    <input type="text" id="entreprise" name="entreprise" placeholder="Entreprise">
-    <br>
-    <br>
-    
-    <label for="fonction"></label>
-    <input type="text" id="fonction" name="fonction" placeholder="Fonction">
-    <br>
-    <br>
-    
+      </label>
+      <input type="text" id="entreprise" name="entreprise" placeholder="Entreprise">
+      <br>
+      <label for="fonction"></label>
+      <input type="text" id="fonction" name="fonction" placeholder="Fonction">
+      <br>
+      <br>
+    </div>
+   
     <label for="telephone">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
@@ -102,7 +100,7 @@ function addContact(prenom,nom,entreprise,fonction, telephone,email) {
 let contacts = [];
 function displayContacts() {
   const contentDiv = document.getElementById('content');
-  let html = `<h3>Contacts</h3> 
+  let html = `<p>Contacts(<span id="count"></span>)</p> 
             <table id="list">
               <thead>
                 <tr>
@@ -112,6 +110,7 @@ function displayContacts() {
                   <th>Fonction et entreprise</th>
                   <th>Libéllés</th>
                 </tr>
+                
               </thead>
               <tbody>`;
               // Ajoutez une ligne pour chaque contact dans le tableau
@@ -123,6 +122,7 @@ function displayContacts() {
                         <td>${contact.fonction} ${contact.entreprise}</td>
                         <td>${contact.email}</td>
                       </tr>`;
+                      
               });
               html += '</tbody></table>';
   contentDiv.innerHTML = html;
@@ -134,9 +134,7 @@ function displayContacts() {
 
 //conteneur d'element
 
-
 document.addEventListener('DOMContentLoaded', function() {
-   
-    let td = document.getElementById('list').rows[0].cells.length;
-    alert('Nombre de colonnes est: ' + td);
+  let td = document.getElementById('list').rows[0].cells.length;
+  document.getElementById('count').textContent = 'Nombre de colonnes est: ' + td;
 });
