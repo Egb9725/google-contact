@@ -100,8 +100,8 @@ function addContact(prenom,nom,entreprise,fonction, telephone,email) {
 let contacts = [];
 function displayContacts() {
   const contentDiv = document.getElementById('content');
-  let html = `<p>Contacts(<span id="count"></span>)</p> 
-            <table id="list">
+  let html = `<h1 id="count"></h2> 
+            <table id="myTable">
               <thead>
                 <tr>
                   <th>Titre</th>
@@ -134,7 +134,50 @@ function displayContacts() {
 
 //conteneur d'element
 
-document.addEventListener('DOMContentLoaded', function() {
-  let td = document.getElementById('list').rows[0].cells.length;
-  document.getElementById('count').textContent = 'Nombre de colonnes est: ' + td;
+document.addEventListener("DOMContentLoaded", function() {
+  // Sélectionner le tableau
+  var table = document.getElementById("myTable");
+  // Sélectionner le paragraphe pour afficher le nombre d'éléments
+  var countParagraph = document.getElementById("count");
+
+  // Fonction pour mettre à jour le compteur d'éléments
+  function updateCount() {
+      var count = table.rows.length - 1; // -1 pour exclure l'en-tête du tableau
+      countParagraph.textContent = "Contacts(" + count + ")";
+  }
+
+  // Appeler la fonction pour mettre à jour le compteur initial
+  updateCount();
+
+  // Ajouter un événement pour détecter les changements dans le tableau
+  table.addEventListener("DOMNodeInserted", updateCount);
+  table.addEventListener("DOMNodeRemoved", updateCount);
 });
+
+
+
+// 
+document.addEventListener("DOMContentLoaded", function() {
+  var popup = document.getElementById("popup");
+  var btn = document.getElementById("popupButton");
+  var span = document.getElementsByClassName("close")[0];
+
+  // Affiche la popup quand le bouton est cliqué
+  btn.onclick = function() {
+      popup.style.display = "block";
+  }
+
+  // Ferme la popup quand l'utilisateur clique sur <span> (x)
+  span.onclick = function() {
+      popup.style.display = "none";
+  }
+
+  // Ferme la popup quand l'utilisateur clique en dehors de la popup
+  window.onclick = function(event) {
+      if (event.target == popup) {
+          popup.style.display = "none";
+      }
+  }
+});
+
+
