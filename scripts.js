@@ -45,11 +45,7 @@ document.getElementById('create-contact').addEventListener('click', function() {
         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
       </svg>
     </label> 
-    <select id="pays">
-      <option value="valeur1">Valeur 1</option>
-      <option value="valeur2" selected>Valeur 2</option>
-      <option value="valeur3">Valeur 3</option>
-    </select>
+
     <input type="tel" id="telephone" name="telephone" pattern="^\+\d{1,3}\s?\(\d{1,3}\)\s?\d{3,4}\s?-?\d{2,3}\s?-?\d{2,3}$
     " required /> 
     <br>
@@ -64,6 +60,7 @@ document.getElementById('create-contact').addEventListener('click', function() {
     ">
     <br>
     <br>
+    <button type="submit" >+ Ajouter Adresse email</button>
 
     <button type="submit" class="save-button" onclick="countElements()">Enregistrer</button>
 
@@ -156,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// 
+// Pour  faire apparaitre la fenetre popup
 document.addEventListener("DOMContentLoaded", function() {
   var popup = document.getElementById("popup");
   var btn = document.getElementById("popupButton");
