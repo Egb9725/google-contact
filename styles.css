@@ -45,6 +45,7 @@ body, html {
   height: 40px;
 }
 
+
 /* Sidebar et recepeteur de contenu */
 .container {
   display: flex;
@@ -93,7 +94,7 @@ body, html {
   transition: margin-left 0.5s;
   border-radius: 1rem;
   margin-top: 0px;
-  min-height: 85vh;
+  min-height: 90vh;
   padding: 2rem;
 
 }
