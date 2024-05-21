@@ -44,7 +44,9 @@ body, html {
   width: 40px;
   height: 40px;
 }
-
+#search-input{
+  
+}
 
 /* Sidebar et recepeteur de contenu */
 .container {
@@ -86,16 +88,24 @@ body, html {
   
 }
 
-
+#create-contact-2 {/* Pour le boutons de frequents*/
+  width: 70%;
+  font-weight: 700;
+  border: none;
+  text-align: left;
+  background-color: #F6F8FC;
+  padding: 10px;
+  
+}
 
 .content {/* Pour recepteur de contenu */
   flex-grow: 1;
   background-color: white;
   transition: margin-left 0.5s;
   border-radius: 1rem;
+  padding: 24px 12px;
   margin-top: 0px;
-  min-height: 90vh;
-  padding: 2rem;
+  
 
 }
 .hiddenSidebar .sidebar { /* la sidebar est cachée */
@@ -179,6 +189,7 @@ form{
   font-weight: 700;
   border: none;
   padding: 10px;
+ 
   text-align: left;
   background-color: #F6F8FC;
 }

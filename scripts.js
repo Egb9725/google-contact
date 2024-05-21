@@ -100,7 +100,7 @@ function addContact(prenom,nom,entreprise,fonction, telephone,email) {
 let contacts = [];
 function displayContacts() {
   const contentDiv = document.getElementById('content');
-  let html = `<h1 id="count"></h2> 
+  let html = `<h3 class="titre-content">Contacts <span>(0)</span></h3>
             <table id="myTable">
               <thead>
                 <tr>
@@ -121,14 +121,13 @@ function displayContacts() {
                         <td>${contact.email}</td>
                         <td>${contact.telephone}</td>
                         <td>${contact.fonction} ${contact.entreprise}</td>
-                        <td><button class="libbtn">Modifier</button><button class="libbtn">Supprimer</button></td>
+                        <td><button class="libbtn btnModifier">Modifier</button><button class="libbtn btnSupprimer">Supprimer</button></td>
                       </tr>`;
                       
               });
               html += '</tbody></table>';
   contentDiv.innerHTML = html;
 }
-
 
 
 
