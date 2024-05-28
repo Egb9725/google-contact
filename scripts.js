@@ -121,14 +121,13 @@ function displayContacts() {
                         <td>${contact.email}</td>
                         <td>${contact.telephone}</td>
                         <td>${contact.fonction} ${contact.entreprise}</td>
-                        <td><button class="libbtn btnModifier">Modifier</button><button class="libbtn btnSupprimer">Supprimer</button></td>
+                        <td><button class="libbtn btnModifier"onclick="Modifier()">Modifier</button><button class="libbtn btnSupprimer" onclick="Supprimer()">Supprimer</button></td>
                       </tr>`;
                       
               });
               html += '</tbody></table>';
   contentDiv.innerHTML = html;
 }
-
 
 
 
