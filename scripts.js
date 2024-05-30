@@ -175,36 +175,68 @@ function addContact(prenom, nom, entreprise, fonction, telephone, email) {
 
 function displayContacts() {
   const contentDiv = document.getElementById('content');
-  let html = `<h1 id="count"></h2> 
-            <table id="myTable">
-              <thead>
-                <tr>
-                  <th>Titre</th>
+  let html = `
+      <h1 id="count">Contacts (${contacts.length})</h1> 
+      <table id="myTable">
+          <thead>
+              <tr>
+                  <th>Nom</th>
                   <th>E-mail</th>
                   <th>Numéro de téléphone</th>
                   <th>Fonction et entreprise</th>
-                  <th>Libéllés</th>
-                </tr>
-                
-              </thead>
-              <tbody>`;
-              // Ajoutez une ligne pour chaque contact dans le tableau
-              contacts.forEach(contact => {
-              html += `<hr>
-                      <tr>
-                        <td>${contact.prenom} ${contact.nom}</td>
-                        <td>${contact.email}</td>
-                        <td>${contact.telephone}</td>
-                        <td>${contact.fonction} ${contact.entreprise}</td>
-                        <td><button class="libbtn">Modifier</button><button class="libbtn">Supprimer</button></td>
-                      </tr>`;
-                      
-              });
-              html += '</tbody></table>';
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>`;
+  contacts.forEach(contact => {
+      html += `
+          <tr>
+              <td>${contact.prenom} ${contact.nom}</td>
+              <td>${contact.email}</td>
+              <td>${contact.telephone}</td>
+              <td>${contact.fonction} ${contact.entreprise}</td>
+              <td>
+                  <button class="libbtn" onclick="editRow(this)">Modifier</button>
+                  <button class="libbtn" onclick="deleteRow(this)">Supprimer</button>
+              </td>
+          </tr>`;
+  });
+  html += '</tbody></table>';
   contentDiv.innerHTML = html;
 }
 
+function editRow(button) {
+  const row = button.parentNode.parentNode;
+  const cells = row.getElementsByTagName('td');
+  const prenomNom = cells[0].innerText.split(' ');
+  const prenom = prenomNom[0];
+  const nom = prenomNom[1];
+  const email = cells[1].innerText;
+  const telephone = cells[2].innerText;
+  const fonctionEntreprise = cells[3].innerText.split(' ');
+  const fonction = fonctionEntreprise[0];
+  const entreprise = fonctionEntreprise.slice(1).join(' ');
 
+  const newPrenom = prompt("Edit Prénom:", prenom);
+  const newNom = prompt("Edit Nom:", nom);
+  const newEmail = prompt("Edit Email:", email);
+  const newTelephone = prompt("Edit Téléphone:", telephone);
+  const newFonction = prompt("Edit Fonction:", fonction);
+  const newEntreprise = prompt("Edit Entreprise:", entreprise);
+
+  if (newPrenom !== null) cells[0].innerText = `${newPrenom} ${newNom}`;
+  if (newEmail !== null) cells[1].innerText = newEmail;
+  if (newTelephone !== null) cells[2].innerText = newTelephone;
+  if (newFonction !== null && newEntreprise !== null) cells[3].innerText = `${newFonction} ${newEntreprise}`;
+}
+
+function deleteRow(button) {
+  const row = button.parentNode.parentNode;
+  row.parentNode.removeChild(row);
+  const index = contacts.findIndex(contact => contact.email === row.cells[1].innerText);
+  contacts.splice(index, 1);
+  displayContacts();
+}
 
 
 
