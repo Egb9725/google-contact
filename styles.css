@@ -9,19 +9,19 @@ body, html {
 .navbar {
   color: black;
   padding: 10px;
-  display: flex; /* Utilisez Flexbox pour aligner les éléments */
-  align-items: center; /* Centre les éléments verticalement */
-  justify-content: space-between; /* Répartit les éléments uniformément */
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
 }
 
 .navbar > .cont {
   display: flex; 
   align-items: center; 
-  gap: 10px; /* Espacement entre les éléments dans .cont */
+  gap: 10px; 
 }
 
 .navbar input[type="text"] {
-  flex-grow: 1; /* Permet à l'input de prendre tout l'espace disponible */
+  flex-grow: 1; 
   margin: 0 20px; 
   padding: 8px 15px; 
   border-radius: 8px; 
@@ -33,8 +33,8 @@ body, html {
   border: none;
   cursor: pointer;
   display: flex; 
-  align-items: center; /* Centre verticalement le SVG */
-  justify-content: center; /* Centre horizontalement le SVG */
+  align-items: center; 
+  justify-content: center; 
   width: 40px; 
   height: 40px; 
   padding: 5px; 
@@ -44,15 +44,13 @@ body, html {
   width: 40px;
   height: 40px;
 }
-#search-input{
-  
-}
 
-/* Sidebar et recepeteur de contenu */
+/* Sidebar et recepteur de contenu */
 .container {
   display: flex;
   height: calc(100% - 40px);
 }
+
 .sidebar {
   width: 200px;
   height: 100%;
@@ -61,23 +59,22 @@ body, html {
   gap: 1rem;
   flex-direction: column;
   display: flex;
-  
 }
+
 .sidebar.hidden {
   display: none;
 }
 
-#create-contact {/* Pour le boutons de creer du contact*/
+#create-contact {
   width: 10rem;
   background-color: #C2E7FF;
   font-weight: 700;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
-  
 }
 
-#create-contact-1{/* Pour le boutons de contact*/
+#create-contact-1 {
   width: 10rem;
   text-align: left;
   background-color: #C2E7FF;
@@ -85,43 +82,41 @@ body, html {
   border: none;
   border-radius: 1rem;
   padding: 10px;
-  
 }
 
-#create-contact-2 {/* Pour le boutons de frequents*/
+#create-contact-2 {
   width: 70%;
   font-weight: 700;
   border: none;
   text-align: left;
   background-color: #F6F8FC;
   padding: 10px;
-  
 }
 
-.content {/* Pour recepteur de contenu */
+.content {
   flex-grow: 1;
   background-color: white;
   transition: margin-left 0.5s;
   border-radius: 1rem;
   padding: 24px 12px;
   margin-top: 0px;
-  
-
 }
-.hiddenSidebar .sidebar { /* la sidebar est cachée */
+
+.hiddenSidebar .sidebar {
   width: 0;
 }
-.hiddenSidebar .content { /* le contenu principal prendra toute la largeur disponible lorsque la barre latérale est cachée */
+
+.hiddenSidebar .content {
   margin-left: 0;
 }
 
-.contact-form {/* pour positionner le bouton en haut */
+.contact-form {
   position: relative; 
   padding-top: 50px; 
 }
 
 .save-button {
-  position: absolute; /* Positionnement absolu par rapport au premier parent relatif */
+  position: absolute; 
   top: 10px; 
   right: 10px; 
   border-radius: 1rem;
@@ -136,66 +131,68 @@ body, html {
   width: 162px;
 }
 
-
-table { /* mise en forme tableau */
-width: 100%;
-border-collapse: collapse; /* Les bordures des cellules sont fusionnées */
+table {
+  width: 100%;
+  border-collapse: collapse; 
 }
 
 th, td {
-border: none; /* Bordure légère pour chaque cellule */
-padding: 8px; 
-text-align: left; 
+  border: none; 
+  padding: 8px; 
+  text-align: left; 
 }
 
 td {
-background-color: white; /* Couleur de fond pour les en-têtes de tableau */
+  background-color: white; 
 }
 
-
-.libbtn{
+.libbtn {
   border: none;
   padding: 0.5rem;
   color: #1c48f5;
   background-color: white;
 }
-.larg{
-  width:20rem;
-}
-.long{
-  border: none;
 
+.larg {
+  width: 20rem;
 }
-#fonction{
+
+.long {
+  border: none;
+}
+
+#fonction {
   margin-left: 1.2rem;
 }
-#nom{
+
+#nom {
   margin-left: 1.2rem;
 }
-.length{
+
+.length {
   width: 22rem;
   color: #1c48f5;
   border-radius: 1rem;
   border: none;
   padding: 0.5rem;
 }
-form{
+
+form {
   margin-left: 5%;
 }
 
 /* styles.css */
-.create-contact-2 {/* Pour le boutons de frequents*/
+.create-contact-2 {
   width: 70%;
   font-weight: 700;
   border: none;
   padding: 10px;
- 
   text-align: left;
   background-color: #F6F8FC;
 }
 
 #popup {
-  display: none; /* Caché par défaut */
+  display: none; 
   position: fixed;
   z-index: 1;
   left: 0;
@@ -203,7 +200,7 @@ form{
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4); /* Fond sombre */
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .popup-content {
@@ -227,4 +224,79 @@ form{
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Media queries pour rendre le design responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-form {
+    padding-top: 20px;
+  }
+
+  .larg {
+    width: 100%;
+  }
+
+  .length {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar input[type="text"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-form {
+    padding-top: 20px;
+  }
+
+  .larg {
+    width: 100%;
+  }
+
+  .length {
+    width: 100%;
+  }
 }
