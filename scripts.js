@@ -1,8 +1,14 @@
 //pour faire disparaitre le sidebar
-document.getElementById('toggle-sidebar').addEventListener('click', function() {
-  document.querySelector('.container').classList.toggle('hiddenSidebar');
-});
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleSidebarButton = document.getElementById('toggle-sidebar');
+  const sidebar = document.querySelector('.sidebar');
+  const content = document.querySelector('.content');
 
+
+  toggleSidebarButton.addEventListener('click', function() {
+    sidebar.classList.toggle('hidden');
+    content.classList.toggle('hiddenSidebar');
+  });
 
 //déclencher un evenement à chaque fois qu'un formulaire est soumis sur la page
 document.addEventListener('submit', function(event) {
@@ -32,32 +38,32 @@ document.getElementById('create-contact').addEventListener('click', () => {
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
       </svg>
       <div>
-        <label for="prenom">
+        <div for="prenom">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
           </svg>
-        </label>
-        <input type="text" id="prenom" class="larg" placeholder="Prénom" name="prenom">
-        <input type="text" id="nom" class="larg" name="nom" placeholder="Nom">
+        </div>
+        <div><input type="text" id="prenom" class="larg" placeholder="Prénom" name="prenom"> </div>
+        <div><input type="text" id="nom" class="larg" name="nom" placeholder="Nom"></div>
       </div>
       <div>
-        <label for="entreprise">
+        <div for="entreprise">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
             <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
             <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"/>
           </svg>
-        </label>
-        <input type="text" id="entreprise" class="larg" name="entreprise" placeholder="Entreprise">
-        <input type="text" id="fonction" class="larg" name="fonction" placeholder="Fonction">
+        </div>
+        <div><input type="text" id="entreprise" class="larg" name="entreprise" placeholder="Entreprise"> </div>
+        <div><input type="text" id="fonction" class="larg" name="fonction" placeholder="Fonction"> </div>
       </div>
       <div>
-        <label for="email">
+        <div for="email">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
             <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
           </svg>
-        </label>
-        <input type="email" id="email" name="email" placeholder="E-mail" class="larg" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-        <button type="submit" class="length">+ Ajouter Adresse email</button>
+        </div>
+        <div><input type="email" id="email" name="email" placeholder="E-mail" class="larg" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"> </div>
+        <div><button type="submit" class="length">+ Ajouter Adresse email</button> </div>
       </div>
       <div>
         <label for="telephone">
@@ -72,20 +78,6 @@ document.getElementById('create-contact').addEventListener('click', () => {
   `;
 });
 
-document.addEventListener('submit', event => {
-  event.preventDefault();
-  if (event.target.id === 'contactForm') {
-    const form = event.target;
-    const prenom = form.querySelector('#prenom').value;
-    const nom = form.querySelector('#nom').value;
-    const entreprise = form.querySelector('#entreprise').value;
-    const fonction = form.querySelector('#fonction').value;
-    const telephone = form.querySelector('#telephone').value;
-    const email = form.querySelector('#email').value;
-    addContact(prenom, nom, entreprise, fonction, telephone, email);
-  }
-});
-
 let contacts = [];
 
 function addContact(prenom, nom, entreprise, fonction, telephone, email) {
@@ -95,7 +87,7 @@ function addContact(prenom, nom, entreprise, fonction, telephone, email) {
 
 function displayContacts() {
   const contentDiv = document.getElementById('content');
-  let html = `
+  const contactTable = `
     <h1 id="count">Contacts (${contacts.length})</h1>
     <table id="myTable">
       <thead>
@@ -107,23 +99,32 @@ function displayContacts() {
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody>`;
-  contacts.forEach(contact => {
-    html += `
-      <tr>
-        <td>${contact.prenom} ${contact.nom}</td>
-        <td>${contact.email}</td>
-        <td>${contact.telephone}</td>
-        <td>${contact.fonction} ${contact.entreprise}</td>
-        <td>
-          <button class="libbtn" onclick="editRow(this)">Modifier</button>
-          <button class="libbtn" onclick="deleteRow(this)">Supprimer</button>
-        </td>
-      </tr>`;
+      <tbody>
+        ${contacts.map(contact => `
+          <tr>
+            <td>${contact.prenom} ${contact.nom}</td>
+            <td>${contact.email}</td>
+            <td>${contact.telephone}</td>
+            <td>${contact.fonction} ${contact.entreprise}</td>
+            <td>
+              <button class="libbtn edit-btn">Modifier</button>
+              <button class="libbtn delete-btn">Supprimer</button>
+            </td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
+  contentDiv.innerHTML = contactTable;
+  
+  // Ajout des gestionnaires d'événements
+  contentDiv.addEventListener('click', function(event) {
+    if (event.target.classList.contains('edit-btn')) {
+      editRow(event.target);
+    } else if (event.target.classList.contains('delete-btn')) {
+      deleteRow(event.target);
+    }
   });
-  html += '</tbody></table>';
-  contentDiv.innerHTML = html;
 }
+
 
 function editRow(button) {
   const row = button.parentNode.parentNode;
@@ -159,30 +160,40 @@ function deleteRow(button) {
 
 
 
-
-
-// Pour  faire apparaitre la fenetre popup
-document.addEventListener("DOMContentLoaded", function() {
-  var popup = document.getElementById("popup");
-  var btn = document.getElementById("popupButton");
-  var span = document.getElementsByClassName("close")[0];
-
-  // Affiche la popup quand le bouton est cliqué
-  btn.onclick = function() {
-      popup.style.display = "block";
-  }
-
-  // Ferme la popup quand l'utilisateur clique sur <span> (x)
-  span.onclick = function() {
-      popup.style.display = "none";
-  }
-
-  // Ferme la popup quand l'utilisateur clique en dehors de la popup
-  window.onclick = function(event) {
-      if (event.target == popup) {
-          popup.style.display = "none";
-      }
+document.addEventListener('submit', event => {
+  event.preventDefault();
+  if (event.target.id === 'contactForm') {
+    const form = event.target;
+    const prenom = form.querySelector('#prenom').value;
+    const nom = form.querySelector('#nom').value;
+    const entreprise = form.querySelector('#entreprise').value;
+    const fonction = form.querySelector('#fonction').value;
+    const telephone = form.querySelector('#telephone').value;
+    const email = form.querySelector('#email').value;
+    addContact(prenom, nom, entreprise, fonction, telephone, email);
   }
 });
 
 
+
+
+
+  // popup
+  const popup = document.getElementById("popup");
+  const popupButton = document.getElementById("popupButton");
+  const closePopup = document.querySelector(".close");
+
+  popupButton.addEventListener('click', function() {
+    popup.style.display = "block";
+  });
+
+  closePopup.addEventListener('click', function() {
+    popup.style.display = "none";
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  });
+});
