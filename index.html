@@ -54,16 +54,16 @@
       </button>
       <div id="popup" class="popup">
         <div class="popup-content">
-            <span class="close">&times;</span>
-            <h1>Crée un libellé</h1>
-              <form>
-                <fieldset >
-                  <legend>Nouveau libellé</legend>
-                  <input type="text" class="long" /> <br> <br>
-                </fieldset>
-                <input type="button" style="text-align: center;color: blue;border:none;background-color:white;" value="Non,ne faire rien" >
-                <input type="button" style="text-align: center;color: blue; border: none;background-color:white;" value="Enregistrer">
-              </form>
+          <span class="close">&times;</span>
+          <h1>Créer un libellé</h1>
+          <form id="labelForm">
+            <fieldset>
+              <legend>Nouveau libellé</legend>
+              <input type="text" class="long" id="labelName"> <br> <br>
+            </fieldset>
+            <input type="button" style="text-align: center;color: blue;border:none;background-color:white;" value="Non, ne rien faire" id="cancelButton">
+            <input type="submit" style="text-align: center;color: blue; border: none;background-color:white;" value="Enregistrer">
+          </form>
         </div>
       </div>
     </aside>

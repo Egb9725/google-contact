@@ -10,11 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
     content.classList.toggle('hiddenSidebar');
   });
 
-//déclencher un evenement à chaque fois qu'un formulaire est soumis sur la page
+
 document.addEventListener('submit', function(event) {
   event.preventDefault();
-  const form = event.target;
+  const form = event.target;  // Récupérer le formulaire soumis.
   if (form.id === 'contactForm') {
+    // Récupérer les valeurs des champs du formulaire
     const prenom = form.querySelector('#prenom').value;
     const nom = form.querySelector('#nom').value;
     const entreprise = form.querySelector('#entreprise').value;
@@ -25,14 +26,17 @@ document.addEventListener('submit', function(event) {
   }
 });
 
-//ajouter un nouveau contact au tableau 
-document.getElementById('toggle-sidebar').addEventListener('click', () => {
-  document.querySelector('.container').classList.toggle('hiddenSidebar');
-});
+// //ajouter un nouveau contact au tableau 
+// document.getElementById('toggle-sidebar').addEventListener('click', () => {
+//   document.querySelector('.container').classList.toggle('hiddenSidebar');
+// });
+
+//déclencher un evenement à chaque fois qu'un formulaire est soumis sur la page
+
 
 document.getElementById('create-contact').addEventListener('click', () => {
   document.getElementById('content').innerHTML = `
-    <form id="contactForm" class="contact-form">
+      <form id="contactForm" class="contact-form">
       <img class="LrbNhc tUOMob" src="https://www.gstatic.com/identity/boq/profilepicturepicker/photo_silhouette_e02a5f5deb3ffc173119a01bc9575490.png" alt="Photo d'un contact.">
       <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="blue" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3z"/>
@@ -113,6 +117,7 @@ function displayContacts() {
           </tr>`).join('')}
       </tbody>
     </table>`;
+
   contentDiv.innerHTML = contactTable;
   
   // Ajout des gestionnaires d'événements
@@ -179,9 +184,15 @@ document.addEventListener('submit', event => {
 
 
   // popup
+  // Gestion du popup
   const popup = document.getElementById("popup");
   const popupButton = document.getElementById("popupButton");
   const closePopup = document.querySelector(".close");
+  const labelNameInput = document.getElementById("labelName");
+  const cancelButton = document.getElementById("cancelButton");
+
+  // Sauvegarder le nom du label dans le localStorage
+  labelNameInput.value = localStorage.getItem("labelName") || "";
 
   popupButton.addEventListener('click', function() {
     popup.style.display = "block";
@@ -196,4 +207,13 @@ document.addEventListener('submit', event => {
       popup.style.display = "none";
     }
   });
+
+
+  // Annuler le formulaire
+  cancelButton.addEventListener('click', function() {
+    labelNameInput.value = "";
+    popup.style.display = "none";
+  });
 });
+  
+
