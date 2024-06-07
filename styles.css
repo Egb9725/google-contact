@@ -233,7 +233,7 @@ form {
 }
 
 /* Media queries pour rendre le design responsive */
-@media (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -270,7 +270,7 @@ form {
   }
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
